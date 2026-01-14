@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Riviera Hairstylists Inc.</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<!-- ===== Lightbox (fullscreen, outside containers) ===== -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" hidden>
+  <div class="lightbox__backdrop" data-close></div>
+
+  <button class="lb-btn lb-close" id="lbClose" aria-label="Close (Esc)" data-close>&times;</button>
+
+  <button class="lb-btn lb-prev" id="lbPrev" aria-label="Previous image" data-prev>&lsaquo;</button>
+
+  <figure class="lb-stage" aria-live="polite">
+    <img class="lb-img" id="lbImg" alt="" />
+    <figcaption class="lb-caption" id="lbCaption"></figcaption>
+    
+  </figure>
+
+  <button class="lb-btn lb-next" id="lbNext" aria-label="Next image" data-next>&rsaquo;</button>
+</div>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a class="brand" href="#home" aria-label="Riviera home">
+        <img src="rivieria.png" alt="" style="width: 100px;">
+      </a>
+
+      <nav class="nav-links" aria-label="Primary">
+        <a class="nav-link" href="#home">Home</a>
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#services">Services</a>
+        <a class="nav-link" href="#reviews">Reviews</a>
+        <a class="nav-link" href="#team">Team</a>
+        <a class="nav-link" href="#contact">Contact</a>
+        <span class="rating-pill" aria-label="Average rating"><span class="star-gold" aria-hidden="true">★</span> 4.8 <span class="muted">(134)</span></span>
+        <a class="btn btn-outline" href="#contact">Book Now</a>
+      </nav>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mnav" aria-label="Open menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mnav" class="mobile" hidden>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#team">Team</a>
+      <a href="#contact">Contact</a>
+      <a href="#contact" class="btn btn-outline" style="margin:8px 16px;width:max-content">Book Now</a>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="container hero-grid reveal">
+      <div>
+        <h1 class="hero-title">Modern hair artistry with a couture finish.</h1>
+        <span class="gold-rule" aria-hidden="true"></span>
+        <p class="lead">
+          At Riviera Hairstylists Inc., our expert team crafts personalized styles—from timeless classics to runway-ready looks—so you leave feeling polished and confident.
+        </p>
+        <div class="actions">
+          <a class="btn btn-fill" href="#services">Explore Services</a>
+          <a class="btn btn-alt" href="#contact">Book an Appointment</a>
+        </div>
+        <div class="rating"><span class="stars" aria-hidden="true">★★★★★</span> <span class="muted">Rated 5.0 by our clients</span></div>
+
+        <!-- Your gallery -->
+  <div class="gallery" aria-label="Featured Looks">
+    <img src="images/IMG_4455.jpg" alt="Gallery photo">
+    <img src="images/IMG_4456.jpg" alt="Gallery photo">
+    <img src="images/IMG_4457.jpg" alt="Gallery photo">
+    <img src="images/IMG_4460.jpg" alt="Gallery photo">
+    <img src="images/IMG_4463.jpg" alt="Gallery photo">
+    <!-- Hidden gallery images -->
+    <img src="images/IMG_4464.jpg" alt="" class="hidden-gallery-img">
+    <img src="images/IMG_4465.jpg" alt="" class="hidden-gallery-img">
+    <img src="images/IMG_4470.jpg" alt="" class="hidden-gallery-img">
+    <img src="images/IMG_4471.jpg" alt="" class="hidden-gallery-img">
+    <img src="images/IMG_4474.jpg" alt="" class="hidden-gallery-img">
+    <img src="images/IMG_4475.jpg" alt="" class="hidden-gallery-img">
+    <img src="images/IMG_4476.jpg" alt="" class="hidden-gallery-img">
+    <img src="images/IMG_4477.jpg" alt="" class="hidden-gallery-img">
+    <img src="images/downloadgram.org_348606129_1450095029154670_214379485749734583_n.jpg" alt="" class="hidden-gallery-img">
+    <img src="images/downloadgram.org_448560690_484522707290779_4583650680328841838_n.jpg" alt="" class="hidden-gallery-img">
+    <img src="images/downloadgram.org_470039474_1260865821814412_2611470358304961714_n.jpg" alt="" class="hidden-gallery-img">
+    <img src="images/downloadgram.org_491440536_18386288275116684_3385721160669919189_n.jpg" alt="" class="hidden-gallery-img">
+    <img src="images/downloadgram.org_502972980_18391448260116684_2488806066083202790_n.jpg" alt="" class="hidden-gallery-img">
+    <img src="images/downloadgram.org_503047071_18391448374116684_1999065160590963907_n.jpg" alt="" class="hidden-gallery-img">
+    <img src="images/downloadgram.org_505450850_18393260821116684_8928344615978124115_n.jpg" alt="" class="hidden-gallery-img">
+    <img src="images/himag1.jpg" alt="" class="hidden-gallery-img">
+    <img src="images/himage2.jpg" alt="" class="hidden-gallery-img">
+    <img src="images/himage3.jpg" alt="" class="hidden-gallery-img">
+    <img src="images/himage4.jpg" alt="" class="hidden-gallery-img">
+    <img src="images/himage5.jpg" alt="" class="hidden-gallery-img">
+    <img src="images/himage6.jpg" alt="" class="hidden-gallery-img">
+    <img src="images/himage7.jpg" alt="" class="hidden-gallery-img">
+    <img src="images/himage8.jpg" alt="" class="hidden-gallery-img">
+    <!-- duplicates will show as separate items if left in -->
+    <!-- +24 Thumbnail -->
+    <div class="gallery-thumb more-thumb" data-open-gallery data-index="0">
+      <span>+20</span>
+    </div>
+  </div>
+
+
+      </div>
+
+      <div class="hero-right">
+        <figure class="card hero-card glass">
+          <div class="ph-img">
+
+          </div>
+        </figure>
+
+        
+
+        <!-- Featured client review -->
+        <blockquote class="card quote hero-review glass" aria-label="Featured client review">
+          <div class="q-head">
+            <div class="meta">
+              <div class="avatar" style="display:grid;place-items:center;background:#f2efe7;color:#736640;font-weight:800;border:1px solid rgba(0,0,0,.08);width:44px;height:44px;border-radius:50%">LM</div>
+              <div>
+                <strong>Lorena M.</strong>
+                <div class="stars" aria-hidden="true">★★★★★</div>
+              </div>
+            </div>
+            <span class="pill pill-gold" style="color:#FFF">Google Review</span>
+          </div>
+          <p>“Came across this salon just recently and loved the quality of their work and customer service, all stylists are warm, dedicated and their attention to detail is top notch. Definitely coming back again!”</p>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT (Refined two-column with bottom row) ===== -->
+<section class="section about-premium" id="about">
+  <div class="about-bg" aria-hidden="true"></div>
+
+  <div class="container">
+    <!-- Top grid -->
+    <div class="about-grid reveal">
+      <!-- Left column: photo -->
+      <div class="about-left">
+        <figure class="about-media card glass">
+          <img src="images/working.jpg" alt="Inside Riviera salon">
+          <figcaption class="about-badge">Since 2008 • Oakville</figcaption>
+        </figure>
+      </div>
+
+      <!-- Right column: copy + stats + chips -->
+      <div class="about-right">
+        <h2 class="about-title">About Riviera</h2>
+        <p class="about-sub">
+          A boutique salon devoted to detail, blending technique and artistry to create looks that suit your lifestyle, from everyday polish to milestone moments.
+        </p>
+        <p class="about-note">
+          Professional service for <strong>men, women and children</strong> with
+          <strong>40+ years of combined experience</strong> in cuts, color, highlights, updos, and treatments.
+        </p>
+
+        <div class="stats">
+          <div class="stat"><div class="stat-num">20+</div><div class="stat-label">Years Experience</div></div>
+          <div class="stat"><div class="stat-num">4.9<span class="star-gold" aria-hidden="true">★</span></div><div class="stat-label">Average Rating</div></div>
+          <div class="stat"><div class="stat-num">3.5k</div><div class="stat-label">Happy Clients</div></div>
+        </div>
+
+        <div class="badge-row">
+          <span class="badge">Precision Cuts</span>
+          <span class="badge">Lived-in Color</span>
+          <span class="badge">Keratin Smooth</span>
+          <span class="badge">Bridal Styling</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom row: 1×4 features + Hours (inside same container) -->
+    <div class="about-bottom-row">
+      <div class="feature-grid-left" role="list">
+        <div class="feature-card morph" role="listitem">
+          <span class="icon-wrap" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 5h6"/><path d="M9 3h6a2 2 0 0 1 2 2v1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h1V5a2 2 0 0 1 2-2"/><path d="m9 14 2 2 4-4"/>
+            </svg>
+          </span>
+          <div>
+            <h3 class="feature-title">Personalized Consultations</h3>
+            <p class="feature-desc">Face-shape and lifestyle focused guidance before we ever pick up the scissors.</p>
+          </div>
+        </div>
+
+        <div class="feature-card morph" role="listitem">
+          <span class="icon-wrap" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14.5 5.5 20 11l-9 9H5v-6l9.5-8.5Z"/><path d="M16 7 7 16"/>
+            </svg>
+          </span>
+          <div>
+            <h3 class="feature-title">Premium Color Lines</h3>
+            <p class="feature-desc">High-shine color formulas that nourish and enhance your hair’s natural dimension.</p>
+          </div>
+        </div>
+
+        <div class="feature-card morph" role="listitem">
+          <span class="icon-wrap" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3l2.6 5.3L20 11l-5.4 2.7L12 19l-2.6-5.3L4 11l5.4-2.7L12 3z"/>
+            </svg>
+          </span>
+          <div>
+            <h3 class="feature-title">Bridal &amp; Event Styling</h3>
+            <p class="feature-desc">Photo-ready looks with secure, lasting hold and a soft, naturally radiant finish.</p>
+          </div>
+        </div>
+                <div class="feature-card morph" role="listitem">
+          <span class="icon-wrap" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.12 15.88"/><path d="M14.47 14.48 20 20"/>
+            </svg>
+          </span>
+          <div>
+            <h3 class="feature-title">At-Home & On-Location Services</h3>
+            <p class="feature-desc">Bridal, event, and personal styling—wherever you need our team, at home or on location.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== HOURS + VISIT ===== -->
+      <div class="hours-stack">
+        <div class="card hours glass">
+          <div class="kicker muted">Hours</div>
+
+          <div class="hours-grid">
+            <span>Monday–Friday</span><span>10:00–19:00</span>
+            <span>Saturday</span><span>09:00–17:00</span>
+            <span>Sunday</span><span>Closed</span>
+          </div>
+
+          <div class="hours-note">Walk-ins welcome • Appointments preferred</div>
+
+          <!-- Bottom scrolling belt inside the card -->
+          <!--<div class="contact-belt" aria-label="Contact ticker">
+            <div class="ticker">
+              <div class="track">
+                <span class="item">📞 (416) 555-1234 • 📍 123 Lakeshore Rd E, Mississauga</span>
+                <span class="item">📞 (416) 555-1234 • 📍 123 Lakeshore Rd E, Mississauga</span>
+                <span class="item">📞 (416) 555-1234 • 📍 123 Lakeshore Rd E, Mississauga</span>
+              </div>
+            </div>
+          </div>-->
+        </div>
+
+        <div class="hours-extras">
+          <div class="kicker muted">Visit</div>
+          <ul class="extras-list">
+            <li><strong>Address:</strong> 359 Kerr St, Oakville</li>
+            <li><strong>Phone:</strong> <a href="tel:+19058458281">(905) 845-8281</a></li>
+          </ul>
+        </div>
+      </div>
+    
+  </div>
+    </div>
+  </div><!-- /.container -->
+</section>
+
+
+
+  <hr class="lux">
+
+  <!-- ===== SERVICES ===== -->
+  <section class="section section-plain" id="services">
+    <div class="container reveal">
+      <div class="section-head">
+        <h2>Featured Services</h2>
+        <div class="legend">
+          <span class="legend-item"><span class="dot"></span>Most Booked</span>
+          <span class="legend-item"><span class="dot dot-gold"></span>Premium</span>
+        </div>
+      </div>
+
+      <div class="grid cols-3 fancy-services" id="servicesGrid"><!-- injected by JS --></div>
+    </div>
+  </section>
+
+  <!-- ===== REVIEWS (Carousel) ===== -->
+  <section class="section" id="reviews">
+    <div class="container reveal">
+      <div class="section-head">
+        <div>
+          <h2>What Clients Say</h2>
+          <p class="muted">Pulled from Google Reviews (when connected).</p>
+        </div>
+        <a class="btn btn-outline" id="leaveReviewBtn" target="_blank" rel="noopener">Leave a review</a>
+      </div>
+
+      <div class="reviews-carousel" role="region" aria-label="Client Reviews Carousel">
+        
+
+        <div class="rc-viewport" id="rcViewport">
+          <div class="rc-track" id="rcTrack"><!-- Slides injected --></div>
+        </div>
+
+        
+
+        <div class="rc-dots" id="rcDots" role="tablist" aria-label="Review pages"></div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="lux" />
+
+  <!-- ===== TEAM ===== -->
+  <section class="section" id="team">
+    <div class="container reveal">
+      <div class="section-head">
+        <h2>Our Stylists</h2>
+        <p class="muted">Expert color, precision cuts, and event styling.</p>
+      </div>
+      <div class="grid cols-2 team-grid">
+        <article class="card team-card glass">
+          <img src="riviera-hairstylists-inc-2/IMG_4467.jpg" alt="Senior Colorist" />
+          <div class="team-body">
+            <h3>Lori (Hyrije) Aziri</h3>
+            <p class="muted">Senior Colorist • Balayage & Gloss</p>
+          </div>
+        </article>
+        <article class="card team-card glass">
+          <img src="riviera-hairstylists-inc-2/riviera-hairstylists-inc-2.jpg" alt="Creative Director" />
+          <div class="team-body">
+            <h3>Emilio</h3>
+            <p class="muted">Creative Director • Precision Cuts</p>
+          </div>
+        </article>
+        <article class="card team-card glass">
+          <img src="https://images.unsplash.com/photo-1623366302587-b38b1ddaefd9?fm=jpg&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cG9ydHJhaXQlMjBtYW58ZW58MHx8MHx8fDA%3D&ixlib=rb-4.1.0&q=60&w=3000" alt="Bridal Specialist" />
+          <div class="team-body">
+            <h3>Peter</h3>
+            <p class="muted">Bridal Specialist • Event Styling</p>
+          </div>
+        </article>
+                <article class="card team-card glass">
+          <img src="https://images.unsplash.com/photo-1520813792240-56fc4a3765a7?q=80&w=1200&auto=format&fit=crop" alt="Senior Colorist" />
+          <div class="team-body">
+            <h3>Lya</h3>
+            <p class="muted">Senior Colorist • Balayage & Gloss</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== INSTAGRAM STRIP ===== -->
+   
+  <section class="insta">
+    <div class="container">
+      <div class="insta-head">
+        <h3>Follow the Shine</h3>
+        <a class="btn btn-outline" href="https://www.instagram.com/lori_hair_professional/" target="_blank" aria-label="Open Instagram">View on Instagram</a>
+      </div>
+      <div class="insta-grid">
+        <div class="insta-embed">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DMhCsjTsv-s/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/p/DMhCsjTsv-s/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/DMhCsjTsv-s/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by Hyrije Aziri (@lori_hair_professional)</a></p></div></blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+       </div>
+          <div class="insta-embed">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DKSzAtnufkS/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/p/DKSzAtnufkS/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/DKSzAtnufkS/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by Hyrije Aziri (@lori_hair_professional)</a></p></div></blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+</div><div class="insta-embed">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DIwWKDjO0wt/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/p/DIwWKDjO0wt/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/DIwWKDjO0wt/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by Hyrije Aziri (@lori_hair_professional)</a></p></div></blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+</div>
+      </div>
+    </div>
+  </section>
+  <!--
+  <section class="insta">
+  <div class="container">
+    <div class="insta-head">
+      <h3>Follow the Shine</h3>
+      <a class="btn btn-outline"
+         href="https://www.instagram.com/lori_hair_professional/"
+         target="_blank"
+         aria-label="Open Instagram">View on Instagram</a>
+    </div>
+
+    <div class="insta-carousel">
+      <button class="insta-prev" aria-label="Previous">&#10094;</button>
+      <div class="insta-track">
+        <div class="insta-slide">
+          
+          <blockquote class="instagram-media"
+            data-instgrm-permalink="https://www.instagram.com/p/DMhCsjTsv-s/"
+            data-instgrm-version="14"></blockquote>
+        </div>
+        <div class="insta-slide">
+          
+          <blockquote class="instagram-media"
+            data-instgrm-permalink="https://www.instagram.com/p/DKSzAtnufkS/"
+            data-instgrm-version="14"></blockquote>
+        </div>
+        <div class="insta-slide">
+          
+          <blockquote class="instagram-media"
+            data-instgrm-permalink="https://www.instagram.com/p/DIwWKDjO0wt/"
+            data-instgrm-version="14"></blockquote>
+        </div>
+      </div>
+      <button class="insta-next" aria-label="Next">&#10095;</button>
+    </div>
+  </div>
+</section>
+
+<script async src="//www.instagram.com/embed.js"></script>
+-->
+
+  <!-- ===== CONTACT ===== -->
+  <section class="contact" id="contact">
+    <div class="contact-glow" aria-hidden="true"></div>
+    <div class="container contact-grid reveal">
+      <div class="contact-panel">
+        <span class="pill pill-glass">Concierge Booking</span>
+        <h2 class="contact-title">Your next signature look starts here.</h2>
+        <p class="contact-lede">Call our team and we will match you with the right stylist and timing. Every appointment is personal, calm, and tailored.</p>
+        <div class="contact-actions">
+          <a class="btn btn-light" href="tel:+19058458281">Call the Salon</a>
+          <a class="btn btn-outline-light" href="https://www.google.com/maps/dir/?api=1&destination=359+Kerr+St,+Oakville,+ON" target="_blank" rel="noopener">Get Directions</a>
+        </div>
+        <div class="contact-divider" aria-hidden="true"></div>
+        <div class="info-list">
+          <div class="chip" title="Phone">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.09 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.3 1.78.57 2.63a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.45-1.14a2 2 0 0 1 2.11-.45c.85.27 1.73.45 2.63.57A2 2 0 0 1 22 16.92z"/></svg>
+            <a href="tel:+19058458281">(905) 845-8281</a>
+          </div>
+          <div class="chip" title="Address">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            <a href="https://www.google.com/maps/search/?api=1&query=359+Kerr+St,+Oakville,+ON" target="_blank" rel="noopener">359 Kerr St, Oakville</a>
+          </div>
+        </div>
+        <p class="contact-note">Walk-ins welcome when available. Evening and Saturday appointments by request.</p>
+      </div>
+
+      <!-- Map -->
+      <div class="card map-card glass">
+        <div class="map-wrap">
+          <iframe src="https://www.google.com/maps?q=359+Kerr+St,+Oakville,+ON&output=embed" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="map-actions">
+          <a class="btn btn-light" href="https://www.google.com/maps/search/?api=1&query=359+Kerr+St,+Oakville,+ON" target="_blank" rel="noopener">Open in Google Maps</a>
+          <a class="btn btn-outline-light" href="https://www.google.com/maps/dir/?api=1&destination=359+Kerr+St,+Oakville,+ON" target="_blank" rel="noopener">Get Directions</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile sticky CTA -->
+    <div class="sticky-cta">
+      <a class="pill pill-light" href="tel:+19058458281">Call</a>
+      <a class="pill pill-dark" href="#contact">Book</a>
+      <a class="pill pill-glass" href="https://www.google.com/maps/dir/?api=1&destination=359+Kerr+St,+Oakville,+ON" target="_blank" rel="noopener">Directions</a>
+    </div>
+  </section>
+
+  <hr class="lux">
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="rivieria.png" alt="Riviera Hairstylists Logo" class="footer-img">
+        <div>
+          <h3>Riviera Hairstylists Inc.</h3>
+          <p class="footer-tagline">Premium hair artistry in Oakville.</p>
+          <div class="footer-social" aria-label="Follow Riviera Hairstylists">
+            <a class="footer-icon" href="https://www.instagram.com/lori_hair_professional/" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4zm5 5a4 4 0 1 0 0 8 4 4 0 0 0 0-8zm6.5-1.75a1 1 0 1 0 0 2 1 1 0 0 0 0-2zM12 9.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5z"/>
+              </svg>
+            </a>
+            <a class="footer-icon" href="https://share.google/b4jH2t3uJFJJdnE4m" target="_blank" rel="noopener" aria-label="Google Reviews">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 3a9 9 0 1 0 0 18 8.7 8.7 0 0 0 5.97-2.27c1.6-1.46 2.38-3.4 2.38-5.73 0-.63-.06-1.1-.14-1.6H12v3.14h5.01c-.2 1.12-.83 2.12-1.75 2.78-.86.6-1.94.94-3.26.94a5.45 5.45 0 1 1 0-10.9c1.38 0 2.53.48 3.4 1.28l2.21-2.13A8.56 8.56 0 0 0 12 3z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-title">Visit</h4>
+        <p class="footer-text">359 Kerr St, Oakville</p>
+        <a class="footer-link" href="tel:+19058458281">(905) 845-8281</a>
+        <a class="footer-link" href="https://www.google.com/maps/dir/?api=1&destination=359+Kerr+St,+Oakville,+ON" target="_blank" rel="noopener">Get Directions</a>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p class="footer-copy">© <span id="year"></span> Riviera Hairstylists Inc. All rights reserved.</p>
+      <p class="footer-meta">Est. 2008 • Oakville, ON</p>
+    </div>
+  </footer>
+
+  <!-- Google Reviews config -->
+  <script>
+  window.GREV_CONF = {
+    endpoint: '/.netlify/functions/google-reviews',
+    placeId: 'ChIJqS1CeOhcK4gRWI58cuqKyc4',
+    pageSize: 9,
+    autoplayMs: 3800
+  };
+  window.GREV_LINK = "https://share.google/b4jH2t3uJFJJdnE4m";
+</script>
+
+
+  <!-- App script -->
+  <script src="app.js"></script>
+</body>
+</html>
