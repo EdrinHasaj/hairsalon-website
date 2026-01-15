@@ -1,8 +1,0 @@
-{
-  "dependencies": {
-    "netlify": "^23.9.1"
-  },
-  "devDependencies": {
-    "netlify-cli": "^23.9.1"
-  }
-}
